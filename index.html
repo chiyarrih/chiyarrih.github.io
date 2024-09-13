@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Portfolio</title>
+    <title> Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="cmLogo">
-            <img src="cm_logo.png" alt="Logo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="cm_logo.png" alt="Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
         </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
     </nav>
 
-    <!-- Sections -->
-    <section id="home">
-        <img src="charry.png" alt="Home Image">
-        <div class="text-context">
-            <h1><b>Hi,</b> I'm Charry!</h1>
-            <p>An IT student who has a passion for web development, <br> front-end design,
-                and digital editing. I thrive on blending creativity <br> with technology 
-                to build engaging and user-friendly experiences.<br> I aim to make meaningful 
-                contributions to innovative projects and <br> advance my skills in the tech field.
-            </p>
+    <section id="home" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="charry.png" alt="Home Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-context">
+                    <h1><b>Hi,</b> I'm Charry!</h1>
+                    <p>An IT student who has a passion for web development, <br> front-end design,
+                        and digital editing. I thrive on blending creativity <br> with technology 
+                        to build engaging and user-friendly experiences.<br> I aim to make meaningful 
+                        contributions to innovative projects and <br> advance my skills in the tech field.</p>
+                    <button class="btn btn-primary"><a href="#about" class="text-white">MORE</a></button>
+                </div>
+            </div>
         </div>
-        <button><a href="#about">MORE</a></button>
     </section>
+
     
-    <section id="about">
+    <section id="about" class="container my-5 py-5 text-center">
         <h1>About Me</h1>
         <p>I am Charry Mae S. Doria. I am currently a second-year IT student that is deeply passionate about technology 
             and design. With a keen interest in web development and front-end design, 
@@ -45,58 +57,55 @@
             I possess a robust foundation in technology principles, complemented by a keen aptitude 
             for innovative design. I am committed to synthesizing these competencies to develop impactful 
             and user-centric projects. My objective is to consistently engage with emerging technologies 
-            and design advancements     to drive excellence within the tech industry.
-        </p>
+            and design advancements     to drive excellence within the tech industry.</p>
     </section>
 
-    <section id="portfolio">
-        <div class="portfolio-content">
-            <h1>Projects</h1>
-            <div class="image-container">
-                <div class="image-item">
-                    <img src="website1.png" alt="Project 1">
-                    <p>Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua.</p>
+    <section id="portfolio" class="container my-5">
+        <h1 class="text-center mb-5">Projects</h1>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="image-item mb-4">
+                    <img src="website1.png" alt="Project 1" class="img-fluid shadow">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="image-item">
-                    <img src="website2.png" alt="Project 2">
-                    <p>Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="image-item mb-4">
+                    <img src="website2.png" alt="Project 2" class="img-fluid shadow">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="image-item">
-                    <img src="website3.png" alt="Project 3">
-                    <p>Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="image-item mb-4">
+                    <img src="website3.png" alt="Project 3" class="img-fluid shadow">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
         </div>
     </section>
-    
 
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <div class="contact-info">
-            <div class="contact-item">
+    <section id="contact" class="container my-5">
+        <h1 class="text-center mb-5">Contact Me</h1>
+        <div class="row text-center">
+            <div class="col-md-3 contact-item">
                 <h2>Email</h2>
-                <p><a href="mailto:doriacharrymae@gmail.com">doriacharrymae@example.com</a></p>
+                <p><a href="mailto:doriacharrymae@example.com">doriacharrymae@example.com</a></p>
             </div>
-            <div class="contact-item">
+            <div class="col-md-3 contact-item">
                 <h2>Phone</h2>
                 <p><a href="tel:+1234567890">+123 456 7890</a></p>
             </div>
-            <div class="contact-item">
+            <div class="col-md-3 contact-item">
                 <h2>LinkedIn</h2>
                 <p><a href="https://www.linkedin.com/in/cmdoria/" target="_blank">LinkedIn Profile</a></p>
             </div>
-            <div class="contact-item">
+            <div class="col-md-3 contact-item">
                 <h2>GitHub</h2>
                 <p><a href="https://github.com/chiyarrih" target="_blank">GitHub Profile</a></p>
             </div>
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,20 +1,10 @@
-/* General styles */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #e2d8d0;
 }
 
-/* Navigation Bar */
+
 nav {
     position: fixed;
     top: 0;
@@ -50,7 +40,7 @@ nav ul li a {
     color: #333;
     font-size: 16px;
     padding: 10px;
-    position: relative; /* Added for underline positioning */
+    position: relative; 
 }
 
 /* Hover and Active Underline Effect */
@@ -59,7 +49,7 @@ nav ul li a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #333; /* Underline color */
+    background-color: #333;
     left: 0;
     bottom: 0;
     transition: width 0.3s ease-in-out;
@@ -67,240 +57,82 @@ nav ul li a::after {
 
 nav ul li a:hover::after,
 nav ul li a:focus::after {
-    width: 100%; /* Full underline on hover or focus */
+    width: 100%; 
 }
 
 nav ul li a:hover {
     color: #555;
 }
-
-/* Sections */
-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #e2d8d0;
-    padding: 20px;
-}
-
 #home {
-    background-color: #e2d8d0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-#home img {
-    width: 50vh;
-    
-    display: block; /* Ensure it's treated as a block element */
-    margin-right: 20px; /* Center horizontally */
+#home .container {
+    display: flex;
+    align-items: center;
 }
-.text-context h1{
-    font-family: "Playfair Display SC", serif;
-}
-.text-context p{
-    font-family: "Montserrat", sans-serif;
-}
-button {
-    background-color: #a77944;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    position: absolute;
+
+#home .col-md-6 img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    bottom: 90px; /* Position the button at the bottom of its container */
-    left: 65%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust horizontal position to center */
 }
 
-button a {
-    text-decoration: none;
+.text-context {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.text-context h1 {
+    font-family: "Playfair Display SC", serif;
+        font-size: 48px;
+}
+
+.text-context p {
+    margin: 20px 0;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.text-context button {
+    background-color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.text-context button a {
     color: #fff;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* About Section */
-#about {
-    background-color: #d4c3b0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Align items to the top */
-    height: 100vh; /* Full viewport height */
-    padding-top: 50px; /* Space at the top */
-}
-
-#about h1 {
-    text-align: center;
-    font-size: 45px;
-    font-family: "Playfair Display SC", serif;
-    margin-bottom: 20px; /* Space between heading and paragraph */
-}
-
-#about p {
-    text-align: center;
-    font-size: 18px;
-    font-family: "Montserrat", sans-serif;
-    color: #333;
-    max-width: 800px; /* Optional: limit width for better readability */
-}
-
-/* Portfolio Section */
-#portfolio {
-    background-color: #e2d8d0;
-    padding: 20px 20px; /* Further reduced padding to move content up */
-    text-align: center; /* Center align text and other content */
-}
-
-#portfolio .portfolio-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center title horizontally */
-}
-
-#portfolio h1 {
-    font-size: 45px;
-    font-family: "Playfair Display SC", serif;
-    margin-top: 0; /* No top margin */
-    margin-bottom: 50px; /* Further reduced space between heading and images */
-}
-
-.image-container {
-    display: flex;
-    justify-content: center; /* Center images horizontally */
-    gap: 70px; /* Reduced space between images */
-    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
-}
-
-.image-item {
-    text-align: center; /* Center text below each image */
-    max-width: 300px; /* Optional: Limit width of image item */
-}
-
-.image-item img {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow with increased spread */
-    width: 100%; /* Full width of the container */
-    
-}
-.image-item p {
-    margin-left: 0; /* No left margin */
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    color: #333;
-    margin-top: 10px; /* Space between image and description */
-}
-
-
-
-
-/* Contact Section */
-#contact {
-    background-color: #d4c3b0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Center content vertically */
-    padding: 0 20px 100px 40px; /* Further reduced padding to move content up */
-    text-align: center;
-}
-
-#contact h1 {
-    font-size: 45px;
-    font-family: "Playfair Display SC", serif;
-    margin-left: 0px;
-    margin-bottom: 50px; /* Space between heading and contact info */
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    flex-wrap: wrap; /* Wrap items on smaller screens */
-    gap: 50px; /* Space between contact items */
-    margin-top: 10px; /* Adjust margin as needed */
-}
-
-.contact-item {
-    background-color: #e2d8d0;
-    border-radius: 8px;
-    padding: 20px;
-    width: 100%;
-    max-width: 250px; /* Adjust width to fit items in a row */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for better visibility */
-    text-align: left; /* Align text to the left inside each item */
-}
-
-.contact-item h2 {
-    font-size: 20px;
-    margin-bottom: 10px; /* Space between heading and content */
-}
-
-.contact-item p {
-    font-size: 16px;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-}
-
-.contact-item a {
     text-decoration: none;
-    color: #a77944;
 }
 
-
-/* Section headings */
-h1 {
-    font-size: 45px;
-    font-family: 'Playfair Display SC', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 100px;
-    margin-bottom: 10px;
-    text-align: left;
+.text-context button a:hover {
+    color: #d4c3b0;
 }
 
-p {
-    font-family: "Montserrat", sans-serif;
-    margin-left: 100px;
-    line-height: 1.5;
-    text-align: justify;
-    font-size: 18px;
-    color: #333;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
     #home {
         flex-direction: column;
-        padding: 20px;
-    }
-    
-    .text-context h1 {
-        font-size: 28px; /* Reduce heading size */
+        text-align: center;
     }
 
-    .text-context p {
-        font-size: 16px; /* Reduce paragraph text size */
+    #home .col-md-6 {
+        margin-bottom: 30px;
     }
 
-    button {
-        padding: 10px 15px;
-        font-size: 14px; /* Smaller button size */
-    }
-}
-
-@media (max-width: 480px) {
-    .text-context h1 {
-        font-size: 24px; /* Further reduce heading size */
+    #home .text-context {
+        align-items: center;
+        padding: 1rem;
     }
 
-    .text-context p {
-        font-size: 14px; /* Further reduce paragraph size */
-        line-height: 1.4; /* Adjust line height for readability */
-    }
-
-    button {
-        padding: 8px 12px;
-        font-size: 12px; /* Smaller button size for mobile */
+    #home .text-context h1 {
+        font-size: 36px;
     }
 }
